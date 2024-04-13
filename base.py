@@ -8,24 +8,18 @@ name_dir = name_dir[::-1]
 
 path_to_file = __file__.replace(name_dir+'\\', '').replace('\\', '//').replace(module_name, '') # getting path to files in current directory (without file name)
 
-
-files = []
 extensions = []
 
-
-def scan_files():
+def printing_files():
+    count = 0
+    print('Имеются следующие файлы:\n')
     for file in listdir(path=path_to_file):
         if file == name_dir:
             continue
         else:
-            files.append(file)
-    print('\nСканирование файлов выполнено!\n')
-
-def printing(lst: list):
-    print('Имеются следующие файлы:\n')
-    for file in lst:
-        print(file)
-    print(f'\nВ общей сложности просканировано и отобрано для работы - {len(lst)} файлов\n')
+            print(file)
+            count += 1
+    print(f'\nВ общей сложности просканировано и отобрано для работы - {count} файлов\n')
 
 
 def completed():

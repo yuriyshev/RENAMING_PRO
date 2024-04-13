@@ -2,6 +2,7 @@ from base import *
 from extension import *
 from choise import *
 
+
 print(f'\n Приветствую в главном меню программы - {name_dir}\n')
 continuation = input('ENTER для продолжения\n')
 
@@ -24,8 +25,7 @@ if len(extensions) > 1:
     else:
         incorrect_input()
 else:
-    scan_files()
-    printing(files)
+    printing_files()
     choose(extensions[0])
 
 

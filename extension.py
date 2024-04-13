@@ -37,7 +37,7 @@ def show_extension():
 
 
 def change_extension():
-    for i in listdir(path='..'):
+    for i in listdir(path=path_to_file):
         if i == name_dir:
             continue
         else:
